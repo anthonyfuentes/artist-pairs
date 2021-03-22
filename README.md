@@ -26,3 +26,9 @@
 
 - [leiningen](https://leiningen.org/#install)
 
+## Design
+
+The `line-seq` function was used to process the input as a lazy sequence of
+strings. This optimization greatly improves the ability to handle large input
+files as the contents will be read and handled on a line-by-line basis instead
+of having to be loaded entirely at the outset.
